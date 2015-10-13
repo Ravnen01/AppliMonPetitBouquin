@@ -1,12 +1,10 @@
 package com.lpiem.mylittelbook;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -43,8 +41,12 @@ public class CustomListBookActivity extends BaseAdapter {
         if(convertView==null){
             convertView = LayoutInflater.from(context).inflate(R.layout.customlistbook,parent, false);
         }
-        TextView text1=(TextView)convertView.findViewById(R.id.textView2);
-        text1.setText(listBook.get(position));
+        TextView tvTitle=(TextView)convertView.findViewById(R.id.tvTitle);
+        tvTitle.setText(listBook.get(position));
+        TextView tvAuthor=(TextView)convertView.findViewById(R.id.tvAuthor);
+        tvAuthor.setText(listBook.get(position));
+        TextView tvISBN=(TextView)convertView.findViewById(R.id.tvISBN);
+        tvISBN.setText(listBook.get(position));
 
 
 

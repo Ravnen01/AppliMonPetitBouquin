@@ -42,6 +42,8 @@ public class BookActivity extends AppCompatActivity {
         listBook.add("Le Seigneur des Anneaux 2");
         listBook.add("Le Seigneur des Anneaux 3");
         listBook.add("Le Seigneur des Anneaux 4");
+        listBook.add("Le Seigneur des Anneaux 5");
+        listBook.add("Le Seigneur des Anneaux 6");
         return listBook;
     }
 
