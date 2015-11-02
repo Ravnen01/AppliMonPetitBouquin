@@ -4,4 +4,6 @@
     <string name="title_activity_book">BookActivity</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_add_book">AddBookActivity</string>
+    <string name="signing_in">Sign In</string>
+    <string name="title_activity_list_critism">ListCritism</string>
 </resources>

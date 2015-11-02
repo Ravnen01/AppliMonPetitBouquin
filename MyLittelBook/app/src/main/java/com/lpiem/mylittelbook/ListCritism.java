@@ -1,6 +1,5 @@
 package com.lpiem.mylittelbook;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,17 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
 
-import com.lpiem.mylittelbook.AsyncTasck.ListBook;
-import com.lpiem.mylittelbook.Model.Book;
+import com.lpiem.mylittelbook.AsyncTasck.ArrayListCritism;
 
-import java.util.ArrayList;
-
-public class BookActivity extends AppCompatActivity {
+public class ListCritism extends AppCompatActivity {
+    private String bookID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book);
+        setContentView(R.layout.activity_list_critism);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,16 +24,13 @@ public class BookActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),AddBookActivity.class);
-                startActivity(intent);
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
+        bookID=getIntent().getStringExtra("bookID");
 
-        new ListBook((ListView)findViewById(R.id.listView),this).execute();
-
-
+        new ArrayListCritism((ListView)findViewById(R.id.listView2),this,bookID).execute();
     }
-
-
 
 }

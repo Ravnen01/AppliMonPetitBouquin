@@ -41,4 +41,11 @@
         android:layout_alignStart="@+id/tvAuthor"
         android:textColor="@color/primary_dark_material_dark"/>
 
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbBook"
+        android:layout_alignStart="@+id/tvISBN"
+        android:layout_below="@+id/tvISBN" />
+
 </RelativeLayout>
