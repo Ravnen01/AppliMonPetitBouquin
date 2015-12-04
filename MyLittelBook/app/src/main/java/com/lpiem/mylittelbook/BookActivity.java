@@ -9,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
 
+import com.lpiem.mylittelbook.AsyncTasck.ListBook;
+import com.lpiem.mylittelbook.Model.Book;
+
 import java.util.ArrayList;
 
 public class BookActivity extends AppCompatActivity {
@@ -29,20 +32,11 @@ public class BookActivity extends AppCompatActivity {
             }
         });
 
-        CustomListBookActivity listAdapter=new CustomListBookActivity(createListBook(),this.getApplicationContext());
-        ListView listView=(ListView)findViewById(R.id.listView);
-        listView.setAdapter(listAdapter);
+        new ListBook((ListView)findViewById(R.id.listView),this).execute();
 
 
     }
 
-    public ArrayList<String> createListBook(){
-        ArrayList<String> listBook=new ArrayList<>();
-        listBook.add("Le Seigneur des Anneaux 1");
-        listBook.add("Le Seigneur des Anneaux 2");
-        listBook.add("Le Seigneur des Anneaux 3");
-        listBook.add("Le Seigneur des Anneaux 4");
-        return listBook;
-    }
+
 
 }

@@ -58,4 +58,10 @@
         android:id="@+id/bSignUp"
         android:layout_alignTop="@+id/bSignIn"
         android:layout_toStartOf="@+id/bSignIn" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="@+id/bSignUp"/>
 </RelativeLayout>

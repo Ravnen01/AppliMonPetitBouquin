@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/textView2"
+        android:id="@+id/tvTitle"
+        android:textColor="@color/primary_dark_material_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_alignParentStart="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_marginEnd="67dp"
+        android:layout_alignParentTop="true"
         android:textColor="@color/primary_dark_material_dark"/>
-</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvAuthor"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toEndOf="@+id/imageView2"
+        android:textColor="@color/primary_dark_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvISBN"
+        android:layout_below="@+id/tvAuthor"
+        android:layout_alignStart="@+id/tvAuthor"
+        android:textColor="@color/primary_dark_material_dark"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbBook"
+        android:layout_alignStart="@+id/tvISBN"
+        android:layout_below="@+id/tvISBN" />
+
+</RelativeLayout>

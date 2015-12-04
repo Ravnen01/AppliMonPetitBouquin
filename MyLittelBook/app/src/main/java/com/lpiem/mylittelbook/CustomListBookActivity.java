@@ -1,13 +1,14 @@
 package com.lpiem.mylittelbook;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.lpiem.mylittelbook.Model.Book;
 
 import java.util.ArrayList;
 
@@ -15,10 +16,10 @@ import java.util.ArrayList;
  * Created by iem2 on 13/10/15.
  */
 public class CustomListBookActivity extends BaseAdapter {
-    ArrayList<String> listBook;
+    ArrayList<Book> listBook;
     Context context;
 
-    public CustomListBookActivity(ArrayList<String> listBook, Context context) {
+    public CustomListBookActivity(ArrayList<Book> listBook, Context context) {
         this.listBook = listBook;
         this.context = context;
     }
@@ -43,8 +44,16 @@ public class CustomListBookActivity extends BaseAdapter {
         if(convertView==null){
             convertView = LayoutInflater.from(context).inflate(R.layout.customlistbook,parent, false);
         }
-        TextView text1=(TextView)convertView.findViewById(R.id.textView2);
-        text1.setText(listBook.get(position));
+        TextView tvTitle=(TextView)convertView.findViewById(R.id.tvTitle);
+        tvTitle.setText(listBook.get(position).getTitle());
+        TextView tvAuthor=(TextView)convertView.findViewById(R.id.tvAuthor);
+        tvAuthor.setText(listBook.get(position).getAuthorName());
+        TextView tvISBN=(TextView)convertView.findViewById(R.id.tvISBN);
+        tvISBN.setText(listBook.get(position).getIsbn());
+        RatingBar rbBook=(RatingBar)convertView.findViewById(R.id.rbBook);
+        rbBook.setRating((float)listBook.get(position).getMoyenne());
+        rbBook.setIsIndicator(true);
+
 
 
 
