@@ -44,12 +44,10 @@ public class CustomListCritisumActivity extends BaseAdapter {
         if(convertView==null){
             convertView = LayoutInflater.from(context).inflate(R.layout.customlistcritism,parent, false);
         }
-        TextView tvUser=(TextView)convertView.findViewById(R.id.tvUser);
-        tvUser.setText(listCritisum.get(position).getUser());
         TextView tvBook=(TextView)convertView.findViewById(R.id.tvBook);
-        tvBook.setText(listCritisum.get(position).getBook());
+        tvBook.setText("ISBN : "+listCritisum.get(position).getBook());
         TextView tvComment=(TextView)convertView.findViewById(R.id.tvComment);
-        tvComment.setText(listCritisum.get(position).getComment());
+        tvComment.setText("Comment : "+listCritisum.get(position).getComment());
         RatingBar rtCritism=(RatingBar)convertView.findViewById(R.id.rtCritism);
         rtCritism.setRating(listCritisum.get(position).getRate());
         rtCritism.setIsIndicator(true);

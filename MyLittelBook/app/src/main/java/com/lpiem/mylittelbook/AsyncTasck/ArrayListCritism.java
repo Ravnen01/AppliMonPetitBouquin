@@ -37,7 +37,7 @@ public class ArrayListCritism extends AsyncTask {
     protected Object doInBackground(Object[] params) {
         URL url= null;
         try {
-            url = new URL("http://192.168.240.31/criticism/"+idBook);
+            url = new URL("http://book.local/criticism/"+idBook);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
             BufferedReader in=new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));

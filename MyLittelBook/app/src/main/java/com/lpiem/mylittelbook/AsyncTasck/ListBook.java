@@ -42,7 +42,7 @@ public class ListBook extends AsyncTask {
     @Override
     protected Object doInBackground(Object[] params) {
         try {
-            URL url=new URL("http://192.168.240.31/book");
+            URL url=new URL("http://book.local/book");
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
             BufferedReader in=new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));

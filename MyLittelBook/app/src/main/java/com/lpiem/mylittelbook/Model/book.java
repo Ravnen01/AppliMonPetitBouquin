@@ -28,7 +28,7 @@ public class Book {
         try {
             isbn=jsonObject.getString("ISBN");
             title=jsonObject.getString("Title");
-            editor=jsonObject.getString("Editor");
+            //editor=jsonObject.getString("Editor");
             authorName=jsonObject.getString("Name");
             authorFirstName=jsonObject.getString("Firstname");
             moyenne=jsonObject.getDouble("AVG(C.Rate)");
